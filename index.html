@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kace — Personal Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="icon"
-      type="image/png"
-      href="https://avatars.githubusercontent.com/u/kaceinspase"
+      href="https://avatars.githubusercontent.com/u/your-github-id"
     />
     <script>
       tailwind.config = {
+        darkMode: "class",
         theme: {
           extend: {
             fontFamily: {
@@ -29,94 +31,89 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .aos-init[data-aos] {
+        opacity: 0;
+        transition-property: opacity, transform;
+      }
+    </style>
   </head>
-  <body class="bg-dark text-white font-futuristic">
+  <body
+    class="bg-dark text-white font-futuristic dark:bg-black dark:text-gray-100"
+  >
+    <!-- Navbar -->
+    <nav
+      class="flex justify-between items-center px-6 py-4 border-b border-gray-700"
+    >
+      <h1 class="text-2xl font-bold text-neon">Kace</h1>
+      <ul class="flex gap-6 text-sm">
+        <li><a href="index.html" class="hover:text-neon">Home</a></li>
+        <li><a href="about.html" class="hover:text-neon">About</a></li>
+        <li><a href="blog.html" class="hover:text-neon">Blog</a></li>
+        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
+        <li>
+          <button
+            onclick="document.documentElement.classList.toggle('dark')"
+            class="text-neon"
+          >
+            🌓
+          </button>
+        </li>
+      </ul>
+    </nav>
+
     <!-- Header -->
-    <header class="text-center py-10">
+    <header class="text-center py-16" data-aos="fade-up">
       <h1 class="text-4xl md:text-5xl font-bold text-neon">
-        Hi, I’m Candra Herdiansyah <span class="text-sm">(Kace)</span>
+        Hi, I’m Candra Herdiansyah (Kace)
       </h1>
       <p class="mt-2 text-gray-400">🚀 Junior Developer | Bandung, Indonesia</p>
+      <p class="italic text-gray-500 mt-1">
+        "Ngoding sampai semicolon terakhir"
+      </p>
     </header>
 
-    <!-- Avatar -->
-    <div class="flex justify-center mb-10">
+    <!-- Hero Image -->
+    <div class="flex justify-center mb-16" data-aos="zoom-in">
       <img
         src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif"
         class="rounded-lg shadow-xl w-[600px] max-w-full"
       />
     </div>
 
-    <!-- About Me -->
-    <section class="max-w-3xl mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold text-neon mb-4">👨‍🏫 About Me</h2>
-      <ul class="space-y-2 text-gray-300">
-        <li>
-          🧰 Full-time <strong>Teacher & IT Support</strong> at Assalaam
-          Vocation School
-        </li>
-        <li>🔭 Exploring Web & Mobile Development, one bug at a time</li>
-        <li>⚽ Gamer ⚔️ Futsal lover 📖 Book reader</li>
-        <li>🐛 0 bugs? Probably forgot to push.</li>
-      </ul>
-    </section>
-
-    <!-- Tech Stack -->
-    <section class="max-w-3xl mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold text-neon mb-4">🧠 Tech Stack</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
-        <div>
-          <h3 class="text-lg font-semibold">🌐 Web Development</h3>
-          <ul class="list-disc list-inside">
-            <li>PHP, Laravel</li>
-            <li>JavaScript, Node.js, Express.js</li>
-            <li>React.js</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">📱 Mobile Development</h3>
-          <ul class="list-disc list-inside">
-            <li>Flutter</li>
-            <li>React Native</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="max-w-3xl mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold text-neon mb-4">📬 Let’s Connect!</h2>
-      <div class="flex flex-wrap gap-3">
-        <a
-          href="https://linkedin.com/in/kangcandraa"
-          target="_blank"
-          class="bg-[#0077B5] px-4 py-2 rounded hover:opacity-80"
-          >LinkedIn</a
+    <!-- Recent Blog Posts -->
+    <section class="max-w-4xl mx-auto px-4 mb-20">
+      <h2 class="text-2xl font-bold text-neon mb-6" data-aos="fade-right">
+        📝 Latest Blog Posts
+      </h2>
+      <div class="space-y-6">
+        <article
+          class="p-4 border border-gray-700 rounded-lg"
+          data-aos="fade-up"
         >
-        <a
-          href="https://youtube.com/candraherdiansyah"
-          target="_blank"
-          class="bg-[#FF0000] px-4 py-2 rounded hover:opacity-80"
-          >YouTube</a
+          <h3 class="text-xl font-semibold">How I Built My Personal Website</h3>
+          <p class="text-sm text-gray-400">May 2025 • Web Development</p>
+          <p class="mt-2 text-gray-300">
+            Step-by-step on building this personal site with Tailwind, AOS, and
+            dark mode...
+          </p>
+          <a href="#" class="text-neon text-sm mt-2 inline-block"
+            >Read More →</a
+          >
+        </article>
+        <article
+          class="p-4 border border-gray-700 rounded-lg"
+          data-aos="fade-up"
         >
-        <a
-          href="https://twitter.com/kangcandra_"
-          target="_blank"
-          class="bg-[#1DA1F2] px-4 py-2 rounded hover:opacity-80"
-          >Twitter</a
-        >
-        <a
-          href="https://medium.com/@candraherdiansyah14"
-          target="_blank"
-          class="bg-black px-4 py-2 rounded hover:opacity-80"
-          >Medium</a
-        >
-        <a
-          href="https://instagram.com/kangcandra_"
-          target="_blank"
-          class="bg-[#E4405F] px-4 py-2 rounded hover:opacity-80"
-          >Instagram</a
-        >
+          <h3 class="text-xl font-semibold">Mastering Laravel Relationships</h3>
+          <p class="text-sm text-gray-400">April 2025 • Laravel</p>
+          <p class="mt-2 text-gray-300">
+            Understanding Eloquent and how to model your data effectively.
+          </p>
+          <a href="#" class="text-neon text-sm mt-2 inline-block"
+            >Read More →</a
+          >
+        </article>
       </div>
     </section>
 
@@ -126,5 +123,12 @@
         <em>“Talk is cheap. Show me the repo.” — <strong>Kace</strong> 🧢</em>
       </p>
     </footer>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
   </body>
 </html>
