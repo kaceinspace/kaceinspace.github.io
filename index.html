@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Kace — Personal Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://avatars.githubusercontent.com/u/kaceinspase"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              futuristic: ['"Orbitron"', "sans-serif"],
+            },
+            colors: {
+              dark: "#0f0f0f",
+              neon: "#00f5ff",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    Hello World
+  <body class="bg-dark text-white font-futuristic">
+    <!-- Header -->
+    <header class="text-center py-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-neon">
+        Hi, I’m Candra Herdiansyah <span class="text-sm">(Kace)</span>
+      </h1>
+      <p class="mt-2 text-gray-400">🚀 Junior Developer | Bandung, Indonesia</p>
+      <p class="italic text-gray-500 mt-1">
+        "Ngoding sampai semicolon terakhir"
+      </p>
+    </header>
+
+    <!-- Avatar -->
+    <div class="flex justify-center mb-10">
+      <img
+        src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif"
+        class="rounded-lg shadow-xl w-[600px] max-w-full"
+      />
+    </div>
+
+    <!-- About Me -->
+    <section class="max-w-3xl mx-auto px-4 mb-16">
+      <h2 class="text-2xl font-bold text-neon mb-4">👨‍🏫 About Me</h2>
+      <ul class="space-y-2 text-gray-300">
+        <li>
+          🧰 Full-time <strong>Teacher & IT Support</strong> at Assalaam
+          Vocation School
+        </li>
+        <li>🔭 Exploring Web & Mobile Development, one bug at a time</li>
+        <li>⚽ Gamer ⚔️ Futsal lover 📖 Book reader</li>
+        <li>🐛 0 bugs? Probably forgot to push.</li>
+      </ul>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="max-w-3xl mx-auto px-4 mb-16">
+      <h2 class="text-2xl font-bold text-neon mb-4">🧠 Tech Stack</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
+        <div>
+          <h3 class="text-lg font-semibold">🌐 Web Development</h3>
+          <ul class="list-disc list-inside">
+            <li>PHP, Laravel</li>
+            <li>JavaScript, Node.js, Express.js</li>
+            <li>React.js</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">📱 Mobile Development</h3>
+          <ul class="list-disc list-inside">
+            <li>Flutter</li>
+            <li>React Native</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="max-w-3xl mx-auto px-4 mb-16">
+      <h2 class="text-2xl font-bold text-neon mb-4">📬 Let’s Connect!</h2>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="https://linkedin.com/in/kangcandraa"
+          target="_blank"
+          class="bg-[#0077B5] px-4 py-2 rounded hover:opacity-80"
+          >LinkedIn</a
+        >
+        <a
+          href="https://youtube.com/candraherdiansyah"
+          target="_blank"
+          class="bg-[#FF0000] px-4 py-2 rounded hover:opacity-80"
+          >YouTube</a
+        >
+        <a
+          href="https://twitter.com/kangcandra_"
+          target="_blank"
+          class="bg-[#1DA1F2] px-4 py-2 rounded hover:opacity-80"
+          >Twitter</a
+        >
+        <a
+          href="https://medium.com/@candraherdiansyah14"
+          target="_blank"
+          class="bg-black px-4 py-2 rounded hover:opacity-80"
+          >Medium</a
+        >
+        <a
+          href="https://instagram.com/kangcandra_"
+          target="_blank"
+          class="bg-[#E4405F] px-4 py-2 rounded hover:opacity-80"
+          >Instagram</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 border-t border-gray-700 text-gray-500">
+      <p>
+        <em>“Talk is cheap. Show me the repo.” — <strong>Kace</strong> 🧢</em>
+      </p>
+    </footer>
   </body>
 </html>
